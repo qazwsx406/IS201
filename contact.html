@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Water Deer Insult Generator</title>
+  <link rel="stylesheet" href="./css/scratchstyles.css">
+  <!-- <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f9f9f9;
+    }
+
+    .container {
+      text-align: center;
+      padding: 20px;
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 90%;
+    }
+
+    .title {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .insult {
+      margin: 20px 0;
+      font-size: 18px;
+      color: #555;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #0078D4;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #005BB5;
+    }
+  </style> -->
+</head>
+<body>
+    <header id="top">
+        <div class="title">Web App Page</div>
+        <div class="menu">
+            <a href="./index.html">Home</a>
+            <a href="./resume.html">Resume</a>
+            <a href="./projects.html">Water Deer</a>
+            <a href="./contact.html">Insult Deer</a>
+        </div>
+    </header>
+    <div class="main-body-gen">
+        <div class="title-gen center">Water Deer Insult Generator</div>
+        <img class="gorani-icon-gen" src="./assets/goranismall.png" width="250px" alt="small gorani">
+        <div class="large gray italic center" id="insult">
+            <div>Click the button to generate an insult!</div>
+        </div>
+        <button id="generateButton">Generate Insult</button>
+    </div>
+
+  <script>
+document.getElementById('generateButton').addEventListener('click', async () => {
+  const insultContainer = document.getElementById('insult');
+  
+  // Remove the initial text if it exists
+  const initialText = insultContainer.querySelector('div'); // Select the initial div
+  if (initialText) {
+    initialText.remove(); // Remove it from the DOM
+  }
+
+  try {
+    // Fetch insult from the API
+    const response = await fetch('https://insults.tr00st.co.uk/phrases/so/?target=Water%20Deer');
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    // Parse the raw text response
+    const insult = await response.text();
+
+    // Create a new paragraph for the insult
+    const newInsultElement = document.createElement('p');
+    newInsultElement.textContent = insult; // Add the insult text
+    newInsultElement.className = 'insult-line'; // Optional: Add a class for styling
+
+    // Append the new insult to the container
+    insultContainer.appendChild(newInsultElement);
+  } catch (error) {
+    // Handle errors gracefully
+    const errorElement = document.createElement('p');
+    errorElement.textContent = 'Failed to fetch insult. Try again later.';
+    errorElement.style.color = 'red'; // Optional: Highlight error in red
+    insultContainer.appendChild(errorElement);
+
+    console.error('Error fetching insult:', error);
+  }
+});
+
+  </script>
+<br>
+<br>
+<br>
+<br>
+<br>
+<footer>
+    <div class="gray small">This is just a footer for this page</div>
+    <div class="gray small">Joonhee Shin</div>
+</footer>
+</body>
+</html>

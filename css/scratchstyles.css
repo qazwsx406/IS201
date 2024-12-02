@@ -1,0 +1,210 @@
+.small {
+    font-size: 13px;
+}
+
+.medium {
+    font-size: 16px;
+}
+
+.large {
+    font-size: 21px;
+}
+
+.xlarge {
+    font-size: 25px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.regular {
+    font-weight:300;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.gray {
+    color: rgb(97, 95, 95);
+}
+
+.center {
+    text-align: center;
+}
+
+body {
+    background-color: #f6f7f7b2 ;
+    font-family: sans-serif;
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    height: 40px;
+    background-color: white;
+    Left: 0px;
+    right: 0px;
+    padding: 16px;
+    padding-left: 10vw;
+    padding-right: 10vw;
+
+}
+
+.gorani-icon {
+    border-radius: 100%; 
+    box-shadow: 0 0 5px rgba(128, 128, 128, 0.253);
+}
+
+.side-anchor {
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    background-color: white;
+    gap: 10px;
+    padding: 10px;
+    margin-top: 30px;
+    position: fixed;
+    right: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(128, 128, 128, 0.137);
+    z-index: 10000;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    height: 40px;
+    background-color: white;
+    Left: 0px;
+    right: 0px;
+    padding: 16px;
+    padding-left: 10vw;
+    padding-right: 10vw;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: inherit;
+}
+
+a:hover {
+    color: rgb(82, 82, 82);
+}
+
+.title {
+    font-weight:Bold;
+    font-size: 21px;
+}
+
+.image-container {
+    display: inherit;
+    flex-direction: inherit;
+    align-items: inherit;
+    gap: 20px;
+}
+
+.menu {
+    font-weight:Bold;
+    color: rgb(131, 129, 129);
+    display: inherit;
+    gap: 20px;
+    font-size: 16px;
+}
+
+.main-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    padding: 80px;
+}
+
+.gorani {
+    width: 40vw;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px gray;
+}
+
+.why-deer{
+    display: inherit;
+    flex-direction: inherit;
+    justify-content: left;
+    align-items: left;
+    width: 60vw;
+}
+
+
+  .container {
+    text-align: center;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 90%;
+  }
+
+  /* .title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  } */
+
+  .insult {
+    margin: 20px 0;
+    font-size: 18px;
+    color: #555;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #0078D4;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #005BB5;
+  }
+
+.main-body-gen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    padding: 80px;
+}
+
+.title-gen {
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.gorani-icon-gen {
+    border-radius: 100%; 
+    box-shadow: 0 0 30px rgba(128, 128, 128, 0.418);
+}
